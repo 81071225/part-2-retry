@@ -1,0 +1,337 @@
+/* ==========================================================================
+   2.2. Establish a Base Style & CSS Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   2.3. Typography Styles & Visual Styles
+   ========================================================================== */
+
+h1,
+h2,
+h3 {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #111111;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 4px solid #d32f2f;
+    padding-bottom: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    color: #444444;
+}
+
+strong {
+    color: #111111;
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+
+.page-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Navigation & Structural Layout
+   ========================================================================== */
+
+nav {
+    background-color: #111111;
+    padding: 1.2rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav h1 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+nav img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+   Interactive States
+   ========================================================================== */
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #d32f2f;
+    outline: none;
+}
+
+nav ul li a:active {
+    color: #b71c1c;
+}
+
+/* ==========================================================================
+   Hero & CTA Sections
+   ========================================================================== */
+
+.hero,
+.cta {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.hero h2,
+.cta h2 {
+    color: #ffffff;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.hero p,
+.cta p {
+    color: #cccccc;
+    max-width: 750px;
+    margin: 0 auto 1rem auto;
+}
+
+.cta a {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8rem 2.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta a:hover,
+.cta a:focus {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Services List
+   ========================================================================== */
+
+.services-list {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-list li {
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+.form-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #222222;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #d32f2f;
+}
+
+/* ==========================================================================
+   Maps & Contact Styles
+   ========================================================================== */
+
+.maps-section {
+    margin-top: 2rem;
+}
+
+.contact-maps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+iframe {
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+/* ==========================================================================
+   3. Responsive Design
+   ========================================================================== */
+
+/* Tablet Breakpoint */
+
+@media screen and (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 5%;
+    }
+
+    nav h1,
+    nav img {
+        margin-bottom: 0;
+    }
+
+    .contact-maps-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Desktop Breakpoint */
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-size: 1.05rem;
+    }
+
+    .page-container {
+        padding: 0;
+    }
+}
